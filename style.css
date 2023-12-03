@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+/* .container {
+    display: flex;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aliceblue;
+    height: 55px;
+    box-shadow: 1px 1px 5px aliceblue;
+}
+
+.logo {
+    height: 40px;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    z-index: 5;
+}
+
+.nav-links {
+    display: flex;
+    font-size: 18px;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.nav-links,
+.logo:hover {
+    cursor: pointer;
+}
+
+.nav-links a {
+    color: blueviolet;
+}
+
+.nav-links a:hover {
+    color: cadetblue;
+}
+  */
+
+nav,
+.nav-links {
+
+    display: flex;
+
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: aliceblue;
+    width: 100vw;
+    position: fixed;
+    z-index: 5;
+
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+    display: none;
+    position: fixed;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+   
+  @media screen and (max-width: 800px) {
+    #desktop-nav {
+      display: none;
+    }
+    #hamburger-nav {
+      display: flex;
+    }
+  }  
+
+/* -------------------------home-------------------------- */
+
+.home {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap-reverse;
+    padding-top: 20px;
+}
+
+.links {
+    margin-top: 100px;
+}
+
+.links ul li {
+    padding: 10px;
+}
+
+.text {
+    width: 600px;
+    margin-top: 90px;
+}
+
+.text h1,
+h3,
+p,
+button {
+    padding-block: 4px;
+}
+
+.text h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: cadetblue;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.text h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(133, 158, 159);
+}
+
+.text p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkgrey;
+    word-spacing: 5px;
+    line-height: 1.3;
+}
+
+.text .buttons {
+    padding-block: 8px;
+}
+
+.text .buttons button {
+    height: 50px;
+    width: 100px;
+    font-size: 15px;
+    border-radius: 8px;
+    background: blueviolet;
+    color: whitesmoke;
+}
+
+.text .buttons button:hover {
+    cursor: pointer;
+    background-color: rgb(86, 0, 165);
+}
+
+.frontend {
+    width: 400px;
+    margin-top: 25px;
+    position: relative;
+    animation: updown 1.4s infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes updown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+.scroll {
+    display: flex;
+    margin-top: 50px;
+    margin-inline: 25%;
+    font-size: 30px;
+    color: darkblue;
+    font-family: 'Courier New', Courier, monospace;
+    gap: 10px;
+    font-weight: lighter;
+}
+
+.scroll:hover {
+    color: cadetblue;
+}
+
+@media screen  and  (max-width<=687){
+    .links {
+        margin-top: 0px;
+    }
+   
+   
+}
+
+/* ------------------------about----------------------- */
+
+.about {
+    margin-top: 350px;
+}
+
+.about h1 {
+    margin-left: 40%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: cornflowerblue;
+    font-size: 32px;
+}
+
+.about img {
+    width: 400px;
+    border-radius: 3px;
+    position: relative;
+    animation: updown 1.4s infinite;
+    animation-direction: alternate-reverse;
+}
+
+.about div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about div p {
+    margin-top: 50px;
+    width: 700px;
+    color: darkgray;
+    font-size: 20px;
+    line-height: 1.2;
+    word-spacing: 4px;
+}
+
+/* -------------------------skills---------------------- */
+#skills h1 {
+    margin-left: 40%;
+    font-size: 40px;
+    color: darkblue;
+}
+
+#skills {
+    margin-top: 350px;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.skills-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-bar,
+.skills-percentage {
+    height: 5px;
+    border-radius: .25rem;
+    margin-block: 5px;
+}
+
+.skills-bar {
+    background-color: rgb(181, 161, 200);
+    width: 300px;
+}
+
+.skills-percentage {
+    display: block;
+    background-color: blueviolet;
+}
+
+.html {
+    width: 80%;
+}
+
+.css {
+    width: 70%;
+}
+
+.javascript {
+    width: 60%;
+}
+
+.react {
+    width: 20%;
+}
+
+.java {
+    width: 30%;
+}
+
+.dsa {
+    width: 80%;
+}
+
+/* --------------------portfolio-------------------------- */
+.portfolio-section {
+    margin-top: 330px;
+}
+
+.section-title {
+    margin-left: 45%;
+    font-size: 32px;
+    color: darkcyan;
+}
+
+.section-subtitle {
+    margin-left: 44%;
+    font-size: 20.3px;
+    color: darkgrey;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    margin-bottom: 20px;
+    margin-top: 40px;
+
+}
+
+.portfolio-content {
+    width: 310px;
+    box-shadow: 0 0 4px #d4ecff;
+    padding: 2px 3px;
+    padding-left: 4px;
+
+}
+
+.portfolio-img {
+    width: 300px;
+    height: 250px;
+    border-radius: .5rem;
+}
+
+.portfolio-title {
+    color: darkcyan;
+}
+
+.portfolio-description {
+    color: darkslategrey;
+}
+
+.portfolio-buttons {
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.portfolio-buttons:hover {
+    cursor: pointer;
+    background-color: rgb(86, 0, 165);
+}
+
+.view-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+    color: white;
+    height: 40px;
+    width: 120px;
+    font-size: 15px;
+    margin-left: 45%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.view-more:hover {
+    cursor: pointer;
+    background-color: darkgray;
+}
+
+/* --------------------------contact me-------------------------------- */
+.contact {
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+
+.contact-title {
+    margin-left: 45%;
+    color: darkcyan;
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    outline-color: blueviolet;
+    background-color: whitesmoke;
+}
+
+input:active {
+    outline-color: blueviolet;
+}
+
+.contact-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-inline: 40%;
+}
+
+.contact-button:hover {
+    background-color: darkgreen;
+}
+
+.contact-form h1 {
+    margin-inline: 46%;
+    margin-top: 20px;
+    color: darkgray;
+}
+
+.contact-form h2 {
+    margin-left: 17%;
+    margin-block: 4px;
+}
+
+
+/* ------------------------media quaries-------------------- */
